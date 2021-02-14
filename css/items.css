@@ -151,13 +151,37 @@ p {
 }
 
 .button:hover {
-    color:rgb(20, 160, 135);
+    color: rgb(20, 160, 135);
     background-color: rgb(255, 255, 255);
     border: .1rem solid  rgb(20, 160, 135);
 }
 
 .button:active {
-    color:rgb(20, 160, 135);
+    color: rgb(20, 160, 135);
     background-color: rgb(201, 199, 199);
     border: .1rem solid  rgb(20, 160, 135);
+}
+
+.twit-ico {
+    fill: rgb(255, 255, 255);
+}
+
+.twit-ico:hover {
+    fill: rgb(102, 232, 255);
+}
+
+.flik-ico {
+    fill: rgb(255, 255, 255);
+}
+
+.flik-ico:hover {
+    fill: rgb(33, 132, 245);;
+}
+
+.drib-ico {
+    fill: rgb(255, 255, 255);
+}
+
+.drib-ico:hover {
+    fill: rgb(247, 121, 121);
 }
