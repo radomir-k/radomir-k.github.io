@@ -134,28 +134,13 @@ p {
 
 .-getstarted {display: flex;}
 
-.fa {
-    display: flex;
-    padding: 20px;
-    font-size: 1rem;
-    width: 36px;
-    text-align: center;
-    text-decoration: none;
-    color: aliceblue;
-}
-
-.fa:hover {color: rgb(255, 138, 138);}
-.fa-twitter {color: rgb(255, 255, 255);}
-.fa-flickr {color: rgb(255, 255, 255);}
-.fa-dribbble {color: rgb(255, 255, 255);}
-
-
 .button {
     display: flex;
     font-family: "rounded-bold", sans-serif;
     font-size: .8rem;
     text-transform: uppercase;
     border: none;
+    border: .1rem solid rgb(20, 160, 135);;
     border-radius: 0.3rem;
     text-align: center;
     outline: none;
@@ -163,4 +148,16 @@ p {
     background-color: rgb(20, 160, 135);
     color: rgb(255, 255, 255);
     padding: 1rem 1.2rem;
+}
+
+.button:hover {
+    color:rgb(20, 160, 135);
+    background-color: rgb(255, 255, 255);
+    border: .1rem solid  rgb(20, 160, 135);
+}
+
+.button:active {
+    color:rgb(20, 160, 135);
+    background-color: rgb(201, 199, 199);
+    border: .1rem solid  rgb(20, 160, 135);
 }
