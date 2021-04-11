@@ -1,0 +1,32 @@
+:root {
+    --base: hsl(230, 25%, 20%);
+    --base-light: hsl(230, 25%, 45%);
+    --panel: hsl(230, 25%, 30%);
+    --fild:  hsl(230, 25%, 50%);
+    --border: hsl(230, 25%, 30%);
+    --text-dark: hsl(230, 25%, 60%);
+    --text-light: hsl(230, 97%, 97%);
+    --text-holder: hsl(230, 25%, 45%);
+    --logo-dark: hsl(230, 25%, 30%);
+    --logo-light: hsl(230, 25%, 60%);
+    --hover-base: hsl(230, 25%, 60%);
+    --hover-ext: hsl(35, 100%, 50%);
+    --activ-base: hsl(230, 25%, 40%);
+    --activ-ext: hsl(35, 100%, 50%);
+}
+
+.grayscale {
+    background: linear-gradient(90deg, #424242 50%, #a8a8a8 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+.red { color: red; }
+.orange { color: orange; }
+.yellow { color: yellow; }
+.green { color: green; }
+.blue { color: blue; }
+.lilac { color:mediumorchid ; }
+.pink  { color: pink; }
+.white { color: white; }
+.gray { color: gray; }
+.black { color: black; }
+.brown { color: brown; }
