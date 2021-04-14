@@ -1,7 +1,7 @@
 
 /* --- Navigation panel -------------------------------------- */
-nav {
-  width: 100vw;
+.menu-container {
+  width: 100%;
   height: auto;
   position: fixed;
   top: 0;
@@ -62,19 +62,6 @@ nav {
   fill: var(--logo-light);
 }
 
-.main-container {
-  display: flex;
-  width: 100%;
-  /* align-items: center; */
-  justify-content: center;
-}
-
-.gallery-container {
-  /* display: flex; */
-  width: 95%;
-  /* align-items: center; */
-  /* justify-content: center; */
-}
 
 /* --- Search controls ----------------------------------------- */
 .search-panel {
@@ -82,17 +69,15 @@ nav {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .gl-search {
   display: flex;
-  /* width: auto; */
   height: 42px;
   border-width: .14rem .0rem .14rem .14rem;
   border-style: solid;
   border-color: var(--border);
-  background-color: var(--fild);
+  background-color: var(--base-light);
   border-radius: .3rem .0rem .0rem .3rem;
 }
 
@@ -102,6 +87,11 @@ input[type=text] {
   font-size: 1.2rem;
   color: var(--text-light);
   padding-left: 10px;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+  color: var(--text-dark);
 }
 
 .-button.search {
@@ -153,13 +143,13 @@ input[type=text] {
 .list-header {
   font-size: 1.1rem;
   padding: 5px;
-  color: hsla(230, 100%, 100%, .5);
+  color: var(--text-dark);
 }
 
 .list-futer {
   font-size: .9rem;
   padding: 4px;
-  color: hsla(230, 100%, 100%, .5);
+  color: var(--text-dark);
 }
 
 .list-item {
@@ -179,28 +169,43 @@ input[type=text] {
   border-radius: 20px;
   border-style: inset;
   border-width: .12rem;
-  border-color: hsla(230, 15%, 40%, .9);
+  border-color: var(--border);
 }
 
 .main-container {
   display: flex;
-  width: 95%;
-  background-color: darkorchid;
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-
-
-
-/* .gallery {
+.gallery {
   display: flex;
-  min-height: 100vh;
+  width: 90vw;
+  padding-top: 5rem;
+  overflow: hidden;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 6rem;
+  justify-content: center;
+
+}
+
+.gallery-item{
+  display: flex;
+  height: 10rem;
+  max-width: 23%;
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: .2rem;
+  background-color: rgba(255, 255, 255, .8);
   overflow: hidden;
 }
 
-.gallery img{
-  display: flex;
-  flex: 1;
-  height: 180px;
-} */
+.gallery img {
+  width: auto;
+  height: 10rem;
+}

@@ -1,9 +1,11 @@
 :root {
     --base: hsl(230, 25%, 20%);
     --base-light: hsl(230, 25%, 45%);
+    --base-wight: hsl(230, 97%, 97%);
+    --base-block: hsl(230, 25%, 75%);
     --panel: hsl(230, 25%, 30%);
-    --fild:  hsl(230, 25%, 50%);
     --border: hsl(230, 25%, 30%);
+    --border-light: hsl(230, 25%, 60%);
     --text-dark: hsl(230, 25%, 60%);
     --text-light: hsl(230, 97%, 97%);
     --text-holder: hsl(230, 25%, 45%);
@@ -30,3 +32,41 @@
 .gray { color: gray; }
 .black { color: black; }
 .brown { color: brown; }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+body {
+    font-family: 'Blinker', sans-serif;
+    font-size: 14px;
+    background-color: var(--base);
+}
+
+hr {
+    width: 95%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border-style: inset;
+    border-width: .12rem;
+    border-color: var(--border);
+}

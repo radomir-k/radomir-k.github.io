@@ -10,29 +10,29 @@
               integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
               crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="./css/global.css">
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
         <link rel="stylesheet" type="text/css" href="./css/presets.css">
         <link rel="stylesheet" type="text/css" href="./css/controls.css">
         <link rel="stylesheet" type="text/css" href="./css/custom.css">
         <link rel="stylesheet" type="text/css" href="./css/slimselect.css">
-
+                
         <title>Gallery</title>
     </head>
 
     <body>
 
-        <div id = "root" class = "root">
-            <nav>
-                <div class = "control-panel">
-                    <div class = "logo">
+        <div id="root" class="root">
+            <nav class="menu-container">
+                <div class="control-panel">
+                    <div class="logo">
                         <p >&#183;PICTURE&nbsp;BOX&#183;</p>
                     </div>
                     <div class="gl-panel">
 
-                        <div class = "search-panel">
-                            <input class = "gl-search" type = "text" placeholder = "Search..">
-                            <button class = "-button search material-icons iconGrey">search</button>
-                            <button class = "-button ext ext-status material-icons iconGrey">filter_alt</button>
+                        <div class="search-panel">
+                            <input class="gl-search" type="text" placeholder="Search..">
+                            <button class="-button search material-icons iconGrey">search</button>
+                            <button class="-button ext ext-status material-icons iconGrey">filter_alt</button>
                         </div>
 
                     </div>
@@ -72,50 +72,78 @@
                     </div>
                 </div>
 
-                <div class = "ext-panel ext-status">
-                    <div class = "ext-panel--container">
+                <div class="ext-panel ext-status">
+                    <div class="ext-panel--container">
                         <hr>
-                        <div class = "data-list">
-                            <span class = "list-header">Type of Image to Search</span>
-                            <select id = "typeSelector" class = "select-group typeSelector" multiple>
+                        <div class="data-list">
+                            <span class="list-header">Type of Image to Search</span>
+                            <select id="typeSelector" class = "select-group typeSelector" multiple>
                                 <!-- Dynamically generated list of Type -->
                             </select>
-                            <span class = "list-futer">*by default looked for in all categories...</span>
+                            <span class="list-futer">*by default looked for in all categories...</span>
                         </div>
                         <hr>
-                        <div class = "data-list">
-                            <span class = "list-header">Category of Image to Search</span>
+                        <div class="data-list">
+                            <span class="list-header">Category of Image to Search</span>
                             <select id = "categorySelector" class = "select-group categorySelector" multiple>
                                 <!-- Dynamically generated list of Categories -->
                             </select>
-                            <span class = "list-futer">*by default looked for in all categories...</span>
+                            <span class="list-futer">*by default looked for in all categories...</span>
                         </div>
                         <hr>
-                        <div class = "color-picker">
+                        <div class="color-picker">
                             <!-- Dynamically generated list of ColorPicker -->
                        </div>
                     </div>
                 </div>
             </nav>
 
-            <main class = "main-container">
-                <div id="gallary" class="gallery">
-                    <a href="./img/big/1.jpg"><img src="./img/small/1.png" alt="Pic"/></a>
-                    <a href="./img/big/2.jpg"><img src="./img/small/2.png" alt="Pic"/></a>
-                    <a href="./img/big/3.jpg"><img src="./img/small/3.png" alt="Pic"/></a>
-                    <a href="./img/big/4.jpg"><img src="./img/small/4.png" alt="Pic"/></a>
-                    <a href="./img/big/5.jpg"><img src="./img/small/5.png" alt="Pic"/></a>
-                    <a href="./img/big/6.jpg"><img src="./img/small/6.png" alt="Pic"/></a>
-                    <a href="./img/big/7.jpg"><img src="./img/small/7.png" alt="Pic"/></a>
-                    <a href="./img/big/8.jpg"><img src="./img/small/2.png" alt="Pic"/></a>
-                    <a href="./img/big/9.jpg"><img src="./img/small/8.png" alt="Pic"/></a>
-                    <a href="./img/big/10.jpg"><img src="./img/small/9.png" alt="Pic"/></a>
-                    <a href="./img/big/11.jpg"><img src="./img/small/10.png" alt="Pic"/></a>
-                    <a href="./img/big/12.jpg"><img src="./img/small/11.png" alt="Pic"/></a>
-                    <a href="./img/big/13.jpg"><img src="./img/small/12.png" alt="Pic"/></a>
-                    <a href="./img/big/14.jpg"><img src="./img/small/13.png" alt="Pic"/></a>
-                    <a href="./img/big/15.jpg"><img src="./img/small/14.png" alt="Pic"/></a>
-                    <a href="./img/big/16.jpg"><img src="./img/small/15.png" alt="Pic"/></a>
+            <main class="main-container">
+                <div class="gallery">
+                    <div class="gallery-item"><a href="./img/big/1.jpg"><img src="./img/small/1.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/2.jpg"><img src="./img/small/2.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/3.jpg"><img src="./img/small/3.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/4.jpg"><img src="./img/small/4.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/5.jpg"><img src="./img/small/5.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/6.jpg"><img src="./img/small/6.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/7.jpg"><img src="./img/small/7.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/8.jpg"><img src="./img/small/8.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/9.jpg"><img src="./img/small/9.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/10.jpg"><img src="./img/small/10.jpg" alt="Pic"/></a></div>
+                    <div class="gallery-item"><a href="./img/big/11.jpg"><img src="./img/small/11.jpg" alt="Pic"/></a></div>
+
+                    <!-- <a href="./img/big/1.jpg"><img src="./img/big/1.jpg" alt="Pictire"></a>
+                    <a href="./img/big/2.jpg"><img src="./img/big/2.jpg" alt="Pictire"></a>
+                    <a href="./img/big/3.jpg"><img src="./img/big/3.jpg" alt="Pictire"></a>
+                    <a href="./img/big/4.jpg"><img src="./img/big/4.jpg" alt="Pictire"></a>
+                    <a href="./img/big/5.jpg"><img src="./img/big/5.jpg" alt="Pictire"></a>
+                    <a href="./img/big/6.jpg"><img src="./img/big/6.jpg" alt="Pictire"></a>
+                    <a href="./img/big/7.jpg"><img src="./img/big/7.jpg" alt="Pictire"></a>
+                    <a href="./img/big/8.jpg"><img src="./img/big/8.jpg" alt="Pictire"></a>
+                    <a href="./img/big/9.jpg"><img src="./img/big/9.jpg" alt="Pictire"></a>
+                    <a href="./img/big/10.jpg"><img src="./img/small/10.jpg" alt="Pictire"></a>
+                    <a href="./img/big/11.jpg"><img src="./img/small/11.jpg" alt="Pictire"></a>
+                    <a href="./img/big/12.jpg"><img src="./img/small/12.jpg" alt="Pictire"></a>
+                    <a href="./img/big/13.jpg"><img src="./img/big/13.jpg" alt="Pictire"></a>
+                    <a href="./img/big/14.jpg"><img src="./img/big/14.jpg" alt="Pictire"></a>
+                    <a href="./img/big/15.jpg"><img src="./img/big/15.jpg" alt="Pictire"></a>
+                    <a href="./img/big/16.jpg"><img src="./img/big/16.jpg" alt="Pictire"></a>
+                    <a href="./img/big/17.jpg"><img src="./img/big/17.jpg" alt="Pictire"></a>
+                    <a href="./img/big/18.jpg"><img src="./img/big/18.jpg" alt="Pictire"></a>
+                    <a href="./img/big/19.jpg"><img src="./img/big/19.jpg" alt="Pictire"></a>
+                    <a href="./img/big/20.jpg"><img src="./img/big/20.jpg" alt="Pictire"></a>
+                    <a href="./img/big/21.jpg"><img src="./img/big/21.jpg" alt="Pictire"></a>
+                    <a href="./img/big/22.jpg"><img src="./img/small/22.jpg" alt="Pictire"></a>
+                    <a href="./img/big/23.jpg"><img src="./img/small/23.jpg" alt="Pictire"></a>
+                    <a href="./img/big/24.jpg"><img src="./img/small/24.jpg" alt="Pictire"></a>
+                    <a href="./img/big/25.jpg"><img src="./img/big/25.jpg" alt="Pictire"></a>
+                    <a href="./img/big/26.jpg"><img src="./img/big/26.jpg" alt="Pictire"></a>
+                    <a href="./img/big/27.jpg"><img src="./img/big/27.jpg" alt="Pictire"></a>
+                    <a href="./img/big/28.jpg"><img src="./img/big/28.jpg" alt="Pictire"></a>
+                    <a href="./img/big/29.jpg"><img src="./img/small/29.jpg" alt="Pictire"></a>
+                    <a href="./img/big/30.jpg"><img src="./img/small/30.jpg" alt="Pictire"></a>
+                    <a href="./img/big/31.jpg"><img src="./img/small/31.jpg" alt="Pictire"></a> -->
+
 
                     <!-- Dynamically generated Picture list -->
                 </div>

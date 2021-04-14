@@ -1,6 +1,7 @@
 
 const connectionSting = 'https://pixabay.com/api/?key=13758930-1d93593cd503dcde0b0b6f27b';
 const picsPerPage = 99;
+let sourceData = [];
 
 const type = [
   {id: 1, class: ".typeSelector", value: "photo"},
@@ -52,10 +53,6 @@ const color = [
   setColorSelector(color);
 
 
-window.onload = function() {
-  
-};
-
 $('.-button.search').click(function(){
 
   let searchStr = ('&q=' + $('.gl-search').val());
@@ -64,13 +61,47 @@ $('.-button.search').click(function(){
   let colorStr = ('&colors=' + getColorsSelect().join('+'));
   let queryStr = connectionSting + searchStr + typeStr + categoryStr + colorStr + "&per_page=" + picsPerPage;
 
+  // let currentList = JSON.parse(fitch(queryStr).hits).map(function(obj){
+  //   return {
+  //     id: obj.id,
+  //     pageURL: obj.pageURL,
+  //     type: obj.type,
+
+  //     previewURL: obj.previewURL,
+  //     previewWidth: obj.previewWidth,
+  //     previewHeight: obj.previewHeight,
+
+  //     webformatURL: obj.webformatURL,
+  //     webformatWidth: obj.webformatWidth,
+  //     webformatHeight: obj.webformatHeight,
+
+  //     largeImageURL: obj.largeImageURL,
+  //     imageWidth: obj.imageWidth,
+  //     imageHeight: obj.imageHeight,
+  //     imageSize: obj.imageSize,
+  //   }
+  // });
+
+  // console.log(currentList);
+  
+
   getPictureCollection(queryStr);
+
 });
 
-function refresh() {
-  window.location.reload();
-}
 
+function getJSON(str) {
+  fetch(str)
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((item) => {
+        sourceData.push(item);
+    });
+  })
+    .catch((error) => {
+      console.log(error);
+  });
+}
 
 // --- Form control --------------------
 $(function () {
@@ -114,15 +145,17 @@ let categorySelector = new SlimSelect({
 function getPictureCollection(fullRequest) {
   fetch(fullRequest) // GET
     .then((response) => response.json())
-    .then((fullRequest) => {
-      fullRequest.hits.forEach((pict) => {
-        let deltaID = pict.id;
-        let deltaSmallPic = pict.previewURL;
-        let deltaBigPic = pict.webformatURL;
+    .then((data) => {
+      data.hits.forEach((data) => {
+        let deltaID = data.id;
+        let deltaSmallPic = data.previewURL;
+        let deltaBigPic = data.webformatURL;
         $('.gallery').append(`
-          <a href="${deltaBigPic}">
-            <img src="${deltaSmallPic}" alt="${deltaID}"/>
-          </a>
+          <div class="gallery-item">
+            <a href="${deltaBigPic}">
+              <img src="${deltaSmallPic}" alt="${deltaID}"/>
+            </a>
+           </div>
         `);
       });
     })
